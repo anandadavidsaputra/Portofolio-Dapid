@@ -1,0 +1,163 @@
+<section id="projects" class="py-12">
+  <style>
+    /* Animation */
+    @keyframes slide-down-fade-in {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-slide-down-fade-in {
+      animation: slide-down-fade-in 0.5s ease-in-out;
+    }
+
+    /* Grid layout */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Card styling */
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Image Slider */
+    .image-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
+
+    .image-slider {
+      display: flex;
+      width: 200%;
+      height: 100%;
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover .image-slider {
+      transform: translateX(-50%);
+    }
+
+    .slide-img {
+      width: 50%;
+      height: 90%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    /* Content */
+    .project-content {
+      padding: 1.2rem;
+      text-align: left;
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-description {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-tech {
+      display: inline-block;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: white;
+      margin-right: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    /* Tech color tags */
+    .flutter {
+      background-color: #0175C2;
+    }
+
+    .php {
+      background-color: #4F5D95;
+    }
+
+    .mysql {
+      background-color: #00758f;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <!-- Title -->
+  <div class="text-center mb-12 px-6 max-w-4xl mx-auto">
+    <h2
+      class="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight bg-gradient-to-l from-[#001f4d] via-[#004080] to-black bg-clip-text text-transparent uppercase leading-[1.05]"
+      style="font-family: 'Montserrat', sans-serif;">
+      Projects
+    </h2>
+    <p class="mt-4 text-base sm:text-lg md:text-xl text-gray-400 leading-relaxed font-normal"
+      style="font-family: 'Lato', sans-serif;">
+      Some of the applications I’ve built using various technologies.
+    </p>
+  </div>
+
+  <!-- Project Grid -->
+  <div class="project-grid">
+
+    <!-- Project Card (duplicate as needed) -->
+    <a href="https://github.com/AnandaDavidSaputra/PresenTen" target="_blank" rel="noopener noreferrer"
+      style="text-decoration: none; color: inherit;">
+      <div class="project-card animate-slide-down-fade-in">
+        <div class="image-wrapper">
+          <div class="image-slider">
+            <img src="assets/PresenTen Logo.png" class="slide-img" alt="PresenTen Logo">
+            <img src="assets/PresenTen View.png" class="slide-img" alt="PresenTen View">
+          </div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">PresenTen</h3>
+          <p class="project-description">Makes managing presence easy and accurate, every day.</p>
+          <span class="project-tech flutter">Flutter</span>
+          <span class="project-tech php">PHP</span>
+          <span class="project-tech mysql">MySQL</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
