@@ -1,6 +1,5 @@
 <section id="projects">
   <style>
-    /* Animation */
     @keyframes slide-down-fade-in {
       0% {
         opacity: 0;
@@ -17,7 +16,6 @@
       animation: slide-down-fade-in 0.5s ease-in-out;
     }
 
-    /* Grid layout */
     .project-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -27,26 +25,37 @@
       padding: 0 1rem;
     }
 
-    /* Card styling */
     .project-card {
       background: white;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* agar isi terdorong ke bawah */
+      height: 100%;
     }
 
     .project-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
       box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
     }
 
-    /* Image Slider */
     .image-wrapper {
-      position: relative;
       width: 100%;
-      aspect-ratio: 4 / 3;
       overflow: hidden;
+      aspect-ratio: 4 / 3;
+      flex-grow: 1;
+    }
+
+    .portrait .image-wrapper {
+      aspect-ratio: 3 / 4;
+    }
+
+    .landscape .image-wrapper {
+      aspect-ratio: 16 / 9;
     }
 
     .image-slider {
@@ -67,14 +76,20 @@
       flex-shrink: 0;
     }
 
-    /* Content */
+    .portrait .slide-img,
+    .landscape .slide-img {
+      width: 100%;
+    }
+
     .project-content {
       padding: 1.2rem;
       text-align: left;
+      min-height: 120px;
     }
 
     .project-title {
-      font-size: 1.5rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
       font-weight: 700;
       color: #222;
       margin-bottom: 0.5rem;
@@ -84,6 +99,7 @@
       font-size: 1rem;
       color: #555;
       margin-bottom: 0.75rem;
+      font-family: 'Lato', sans-serif;
     }
 
     .project-tech {
@@ -97,7 +113,42 @@
       margin-bottom: 0.4rem;
     }
 
-    /* Tech color tags */
+    .poster-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      background-color: #f4f4f4;
+      /* biar posternya keliatan jelas saat ada space */
+    }
+
+    .portrait .image-wrapper,
+    .landscape .image-wrapper {
+      aspect-ratio: unset;
+      height: auto;
+    }
+
+    .portrait .poster-img,
+    .landscape .poster-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      background-color: #fff;
+      margin: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .flutter {
       background-color: #0175C2;
     }
@@ -112,27 +163,22 @@
 
     .java {
       background-color: #f89820;
-      /* Warna oranye khas logo Java */
-      color: white;
     }
 
     .android {
       background-color: #04c042;
-      /* Warna hijau khas Android */
-      color: white;
     }
 
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    .canva {
+      background-color: #00c4cc;
     }
 
-    @media (max-width: 640px) {
-      .project-grid {
-        grid-template-columns: 1fr;
-      }
+    .ai-assisted {
+      background-color: #6c63ff;
+    }
+
+    .manual-drawing {
+      background-color: #6b2181;
     }
   </style>
 
@@ -145,11 +191,19 @@
     </h2>
     <p class="mt-4 text-base sm:text-lg md:text-xl text-gray-400 leading-relaxed font-normal"
       style="font-family: 'Lato', sans-serif;">
-      Some of the applications I’ve built using various technologies.
+      Some of the applications and artworks I’ve built using various technologies.
     </p>
   </div>
 
-  <!-- Project Grid -->
+  <!-- Tech Section -->
+  <div class="text-left mb-6 max-w-6xl mx-auto">
+    <h3
+      class="text-4xl font-extrabold tracking-tight bg-gradient-to-l from-[#001f4d] via-[#004080] to-black bg-clip-text text-transparent uppercase mb-4 leading-tight"
+      style="font-family: 'Montserrat', sans-serif;">
+      Tech Projects
+    </h3>
+  </div>
+
   <div class="project-grid">
 
     <!-- Sedu -->
@@ -159,7 +213,7 @@
         <div class="image-wrapper">
           <div class="image-slider">
             <img src="assets/Sedu/logo.png" class="slide-img" alt="Sedu Logo">
-            <img src="assets/Sedu/view.png" class="slide-img" alt="Sedu App View">
+            <img src="assets/Sedu/view.png" class="slide-img" alt="Sedu View">
           </div>
         </div>
         <div class="project-content">
@@ -190,6 +244,67 @@
         </div>
       </div>
     </a>
+
+  </div>
+
+  <!-- Art Section -->
+  <div class="text-left mt-12 mb-6 max-w-6xl mx-auto">
+    <h3
+      class="text-4xl font-extrabold tracking-tight bg-gradient-to-l from-[#001f4d] via-[#004080] to-black bg-clip-text text-transparent uppercase mb-4 leading-tight"
+      style="font-family: 'Montserrat', sans-serif;">
+      Art Projects
+    </h3>
+  </div>
+
+  <div class="project-grid">
+
+    <!-- Tahun Baru Resolusi 2023 -->
+    <div class="project-card animate-slide-down-fade-in portrait">
+      <div class="image-wrapper">
+        <img src="assets/Art/tahunbaruresolusi2023.jpg" class="poster-img" alt="Poster Tahun Baru Resolusi">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Tahun Baru Resolusi 2023</h3>
+        <p class="project-description">
+          A hand-drawn educational poster featuring New Year’s resolutions and the DUIT concept - an Indonesian acronym
+          that stands for Doa (Prayer), Usaha (Effort), Ikhtiar (Endeavor), and Tawakal (Trust) - promoting personal
+          growth and positive mindset.
+        </p>
+        <span class="project-tech manual-drawing">Manual Drawing</span>
+      </div>
+    </div>
+
+    <!-- Fakta Menarik Daun Pepaya -->
+    <div class="project-card animate-slide-down-fade-in portrait">
+      <div class="image-wrapper">
+        <img src="assets/Art/faktamenarikdaunpepaya.png" class="poster-img" alt="Poster Pepaya">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Fakta Menarik Daun Pepaya</h3>
+        <p class="project-description">
+          An Indonesian-language infographic exploring the health and business value of papaya leaves.
+        </p>
+        <span class="project-tech canva">Canva</span>
+        <span class="project-tech ai-assisted">AI-Assisted Visual</span>
+      </div>
+    </div>
+
+    <!-- Kreativitas Jurnalisme di Tengah Gelombang Transformasi -->
+    <div class="project-card animate-slide-down-fade-in portrait">
+      <div class="image-wrapper">
+        <img src="assets/Art/kreativitasjurnalismeditengahgelombangtransformasi.png" class="poster-img"
+          alt="Poster Kreativitas Jurnalisme">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Kreativitas Jurnalisme di Tengah Gelombang Transformasi</h3>
+        <p class="project-description">
+          A visual infographic showcasing how modern journalism adapts to digital transformation—through creativity,
+          technology, public collaboration, and user engagement.
+        </p>
+        <span class="project-tech canva">Canva</span>
+        <span class="project-tech ai-assisted">AI-Assisted Visual</span>
+      </div>
+    </div>
 
   </div>
 </section>
