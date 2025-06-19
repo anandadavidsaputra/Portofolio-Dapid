@@ -9,7 +9,7 @@ function initBrickGame() {
     const BRICK_ROWS = 4, BRICK_COLS = 6;
     const BRICK_WIDTH = 42, BRICK_HEIGHT = 18;
     const BRICK_PADDING = 8, BRICK_OFFSET_TOP = 30, BRICK_OFFSET_LEFT = 18;
-    const BALL_SPEED = 2.5;
+    const BALL_SPEED = 3.5;
 
     // === STATE ===
     const state = {
@@ -20,7 +20,8 @@ function initBrickGame() {
         dy: -BALL_SPEED,
         bricks: [],
         score: 0,
-        running: true,
+        started: false,
+        running: false,
         gameOver: false,
         finished: false,
         autoPlay: false,
@@ -43,11 +44,19 @@ function initBrickGame() {
 
     function drawBackground() {
         const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-        gradient.addColorStop(0, "#001f4d");
-        gradient.addColorStop(0.5, "#004080");
-        gradient.addColorStop(1, "#000000");
+        gradient.addColorStop(0, "#9e9e9e");  // atas: abu muda
+        gradient.addColorStop(1, "#6d6d6d");  // bawah: abu tua
         ctx.fillStyle = gradient;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Tambahan: tekstur kasar samar
+        for (let i = 0; i < 150; i++) {
+            const x = Math.random() * canvas.width;
+            const y = Math.random() * canvas.height;
+            const alpha = Math.random() * 0.05;
+            ctx.fillStyle = `rgba(0,0,0,${alpha})`;
+            ctx.fillRect(x, y, 1.5, 1.5);
+        }
     }
 
     function drawPaddle() {
@@ -55,7 +64,7 @@ function initBrickGame() {
         ctx.roundRect(state.paddleX, canvas.height - PADDLE_HEIGHT, PADDLE_WIDTH, PADDLE_HEIGHT, {
             tl: 6, tr: 6, br: 12, bl: 12
         });
-        ctx.fillStyle = "#00bcd4";
+        ctx.fillStyle = "#5a4c3b"; // warna kayu tua
         ctx.fill();
         ctx.closePath();
     }
@@ -80,14 +89,25 @@ function initBrickGame() {
                     const brickY = (r * (BRICK_HEIGHT + BRICK_PADDING)) + BRICK_OFFSET_TOP;
                     b.x = brickX;
                     b.y = brickY;
+
+                    // Gradasi bata merah
+                    const gradient = ctx.createLinearGradient(brickX, brickY, brickX, brickY + BRICK_HEIGHT);
+                    gradient.addColorStop(0, `rgba(180, 70, 50, ${b.alpha})`);
+                    gradient.addColorStop(1, `rgba(120, 40, 30, ${b.alpha})`);
+
                     ctx.beginPath();
-                    ctx.roundRect(brickX, brickY, BRICK_WIDTH, BRICK_HEIGHT, 4);
-                    ctx.fillStyle = `rgba(0, 255, 255, ${b.alpha})`;
-                    ctx.shadowColor = "#00ffff";
-                    ctx.shadowBlur = 8 * b.alpha;
+                    ctx.roundRect(brickX, brickY, BRICK_WIDTH, BRICK_HEIGHT, 2);
+                    ctx.fillStyle = gradient;
                     ctx.fill();
+
+                    // Garis semen antar bata
+                    ctx.strokeStyle = `rgba(70, 40, 30, ${b.alpha})`;
+                    ctx.lineWidth = 0.7;
+                    ctx.strokeRect(brickX, brickY, BRICK_WIDTH, BRICK_HEIGHT);
+
                     ctx.closePath();
-                    ctx.shadowBlur = 0;
+
+                    // Efek hancur
                     if (b.status === 0 && b.alpha > 0) {
                         b.alpha -= 0.05;
                         if (b.alpha < 0) b.alpha = 0;
@@ -164,33 +184,47 @@ function initBrickGame() {
         collisionDetection();
     }
 
+    function drawStartPrompt() {
+        if (!state.started) {
+            ctx.font = "18px 'Lato', sans-serif";
+            ctx.fillStyle = "#ffffff";
+            ctx.textAlign = "center";
+            ctx.fillText("👆 Klik layar untuk mulai", canvas.width / 2, canvas.height / 2);
+        }
+    }
+
     function render() {
         drawBackground();
         drawBricks();
         drawBall();
         drawPaddle();
         if (state.gameOver) drawGameOver();
+        drawStartPrompt();
     }
 
     function loop() {
         update();
         render();
-        if (!state.finished) requestAnimationFrame(loop);
+        if (!state.finished) {
+            animationId = requestAnimationFrame(loop);
+        }
     }
 
     function resetGame() {
+        if (animationId) cancelAnimationFrame(animationId);
         state.paddleX = (canvas.width - PADDLE_WIDTH) / 2;
         state.ballX = canvas.width / 2;
         state.ballY = canvas.height - 30;
         state.dx = BALL_SPEED;
         state.dy = -BALL_SPEED;
         state.score = 0;
-        state.running = true;
+        state.running = false;
+        state.started = false;
         state.finished = false;
         state.gameOver = false;
         document.getElementById("score").textContent = "Score: 0";
         createBricks();
-        loop();
+        render(); // hanya render layar diam
     }
 
     function showVictoryEffect() {
@@ -204,10 +238,6 @@ function initBrickGame() {
     document.addEventListener("keydown", e => {
         if (e.key === "ArrowRight") state.input.right = true;
         if (e.key === "ArrowLeft") state.input.left = true;
-        if (e.key === " ") {
-            state.running = !state.running;
-            if (state.running) loop();
-        }
     });
     document.addEventListener("keyup", e => {
         if (e.key === "ArrowRight") state.input.right = false;
@@ -230,6 +260,12 @@ function initBrickGame() {
     rightBtn.addEventListener("touchend", () => state.input.right = false, false);
 
     canvas.addEventListener("click", () => {
+        if (!state.started && !state.running) {
+            state.started = true;
+            state.running = true;
+            loop(); // ⬅️ baru start game
+            return;
+        }
         if (state.gameOver) resetGame();
     });
 
@@ -257,26 +293,38 @@ function initBrickGame() {
     }
 
     // === DEV MODE ===
-    document.getElementById("dev-win")?.addEventListener("click", () => {
-        state.autoPlay = true;
-        state.running = true;
-        state.finished = false;
-        state.gameOver = false;
-        state.dx = BALL_SPEED;
-        state.dy = -BALL_SPEED;
-        loop();
-    });
+document.getElementById("dev-win")?.addEventListener("click", () => {
+    if (animationId) cancelAnimationFrame(animationId);
+    state.started = true;
+    state.autoPlay = false;
+    state.running = false;
+    state.finished = false;
+    state.gameOver = false;
+    state.dx = BALL_SPEED;
+    state.dy = -BALL_SPEED;
+    devAutoDestroy();
+});
 
-    window.devAutoDestroy = function () {
-        for (let c = 0; c < BRICK_COLS; c++) {
-            for (let r = 0; r < BRICK_ROWS; r++) {
-                state.bricks[c][r].status = 0;
-                state.bricks[c][r].alpha = 0;
-            }
+   window.devAutoDestroy = function () {
+    for (let c = 0; c < BRICK_COLS; c++) {
+        for (let r = 0; r < BRICK_ROWS; r++) {
+            state.bricks[c][r].status = 0;
+            state.bricks[c][r].alpha = 0;
         }
-        state.score = BRICK_ROWS * BRICK_COLS;
-        document.getElementById("score").textContent = "Score: " + state.score;
-    };
+    }
+
+    state.score = BRICK_ROWS * BRICK_COLS;
+    document.getElementById("score").textContent = "Score: " + state.score;
+
+    // Tambahan penting:
+    state.running = false;
+    state.finished = true;
+
+    render(); // <-- wajib untuk update tampilan brick yang sudah hilang
+
+    setTimeout(showVictoryEffect, 300);
+};
+
 
     window.restartGame = function () {
         document.getElementById("win-alert").style.display = "none";
@@ -291,5 +339,5 @@ function initBrickGame() {
 
     // === INISIALISASI ===
     createBricks();
-    resetGame();
+    render();
 }
