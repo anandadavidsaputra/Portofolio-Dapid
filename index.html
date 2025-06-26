@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>David's Space</title>
+  <link rel="icon" type="image/png" href="assets/logo circle.png" />
+  <title>David Space</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
@@ -96,8 +97,6 @@
     });
 }
 
-
-
     function getFileFromHash() {
       const hash = window.location.hash.substring(1);
       if (!hash) return 'home.html';
@@ -144,6 +143,20 @@
         document.getElementById('mobile-nav').classList.add('hidden');
       }
     });
+
+    function updatePageTitle() {
+    const hash = window.location.hash.substring(1) || 'home';
+    const titleMap = {
+      home: "Home",
+      projects: "Projects",
+      contact: "Contact",
+    };
+    const section = titleMap[hash] || hash.charAt(0).toUpperCase() + hash.slice(1);
+    document.title = `David Space | ${section}`;
+  }
+
+  window.addEventListener('DOMContentLoaded', updatePageTitle);
+  window.addEventListener('hashchange', updatePageTitle);
   </script>
 </body>
 </html>
