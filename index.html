@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,7 +17,8 @@
   <header class="sticky top-0 z-50 bg-white shadow-md">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center relative">
       <!-- Logo -->
-      <h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-black to-[#001f4d] cursor-default select-none">
+      <h1
+        class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-black to-[#001f4d] cursor-default select-none">
         David's Space
       </h1>
 
@@ -29,11 +31,12 @@
         </button>
 
         <!-- Mobile nav -->
-        <nav id="mobile-nav" class="hidden fixed right-0 top-14 rounded-md py-2 w-40 flex-col font-medium shadow-md bg-white">
+        <nav id="mobile-nav"
+          class="hidden fixed right-0 top-14 rounded-md py-2 w-40 flex-col font-medium shadow-md bg-white">
           <a href="#home" class="nav-link px-4 py-2 text-black hover:text-[#001f4d]">Home</a>
           <a href="#projects" class="nav-link px-4 py-2 text-black hover:text-[#001f4d]">Projects</a>
-          <!-- <a href="#experiences" class="nav-link px-4 py-2 text-black hover:text-[#001f4d]">Experiences</a>
-          <a href="#achievements" class="nav-link px-4 py-2 text-black hover:text-[#001f4d]">Achievements</a> -->
+          <a href="#experiences" class="nav-link px-4 py-2 text-black hover:text-[#001f4d]">Experiences</a>
+          <!-- <a href="#achievements" class="nav-link px-4 py-2 text-black hover:text-[#001f4d]">Achievements</a> -->
           <a href="#contact" class="nav-link px-4 py-2 font-bold text-black hover:text-[#001f4d]">Contact</a>
         </nav>
       </div>
@@ -42,8 +45,8 @@
       <nav id="nav-links" class="hidden md:flex md:flex-row md:items-center gap-6 text-base font-medium">
         <a href="#home" class="nav-link text-black hover:text-[#001f4d]">Home</a>
         <a href="#projects" class="nav-link text-black hover:text-[#001f4d]">Projects</a>
-        <!-- <a href="#experiences" class="nav-link text-black hover:text-[#001f4d]">Experiences</a>
-        <a href="#achievements" class="nav-link text-black hover:text-[#001f4d]">Achievements</a> -->
+        <a href="#experiences" class="nav-link text-black hover:text-[#001f4d]">Experiences</a>
+        <!-- <a href="#achievements" class="nav-link text-black hover:text-[#001f4d]">Achievements</a> -->
         <a href="#contact" class="nav-link font-bold text-black hover:text-[#001f4d]">Contact</a>
       </nav>
     </div>
@@ -57,45 +60,45 @@
   <!-- JS -->
   <script>
     function loadSection(file) {
-  fetch(file)
-    .then(res => {
-      if (!res.ok) throw new Error("Failed to fetch");
-      return res.text();
-    })
-    .then(html => {
-      const contentEl = document.getElementById('main-content');
-      contentEl.innerHTML = html;
+      fetch(file)
+        .then(res => {
+          if (!res.ok) throw new Error("Failed to fetch");
+          return res.text();
+        })
+        .then(html => {
+          const contentEl = document.getElementById('main-content');
+          contentEl.innerHTML = html;
 
-      // Buat container sementara untuk ambil <script>
-      const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = html;
+          // Buat container sementara untuk ambil <script>
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = html;
 
-      // Eksekusi ulang semua <script>
-      tempDiv.querySelectorAll("script").forEach(oldScript => {
-        const newScript = document.createElement("script");
+          // Eksekusi ulang semua <script>
+          tempDiv.querySelectorAll("script").forEach(oldScript => {
+            const newScript = document.createElement("script");
 
-        if (oldScript.src) {
-          newScript.src = oldScript.src;
+            if (oldScript.src) {
+              newScript.src = oldScript.src;
 
-          // Cek apakah ini script brickgame
-          newScript.onload = () => {
-            if (oldScript.src.includes("brickgame.js") && typeof initBrickGame === "function") {
-              initBrickGame();
+              // Cek apakah ini script brickgame
+              newScript.onload = () => {
+                if (oldScript.src.includes("brickgame.js") && typeof initBrickGame === "function") {
+                  initBrickGame();
+                }
+              };
+
+            } else {
+              newScript.textContent = oldScript.textContent;
             }
-          };
 
-        } else {
-          newScript.textContent = oldScript.textContent;
-        }
-
-        document.body.appendChild(newScript);
-      });
-    })
-    .catch(() => {
-      document.getElementById('main-content').innerHTML =
-        "<p class='text-red-500'>Failed to load section.</p>";
-    });
-}
+            document.body.appendChild(newScript);
+          });
+        })
+        .catch(() => {
+          document.getElementById('main-content').innerHTML =
+            "<p class='text-red-500'>Failed to load section.</p>";
+        });
+    }
 
     function getFileFromHash() {
       const hash = window.location.hash.substring(1);
@@ -145,18 +148,19 @@
     });
 
     function updatePageTitle() {
-    const hash = window.location.hash.substring(1) || 'home';
-    const titleMap = {
-      home: "Home",
-      projects: "Projects",
-      contact: "Contact",
-    };
-    const section = titleMap[hash] || hash.charAt(0).toUpperCase() + hash.slice(1);
-    document.title = `David Space | ${section}`;
-  }
+      const hash = window.location.hash.substring(1) || 'home';
+      const titleMap = {
+        home: "Home",
+        projects: "Projects",
+        contact: "Contact",
+      };
+      const section = titleMap[hash] || hash.charAt(0).toUpperCase() + hash.slice(1);
+      document.title = `David Space | ${section}`;
+    }
 
-  window.addEventListener('DOMContentLoaded', updatePageTitle);
-  window.addEventListener('hashchange', updatePageTitle);
+    window.addEventListener('DOMContentLoaded', updatePageTitle);
+    window.addEventListener('hashchange', updatePageTitle);
   </script>
 </body>
+
 </html>
