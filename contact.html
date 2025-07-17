@@ -1,63 +1,7 @@
 <section id="contact">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
 
-    .tooltip {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .tooltip .tooltip-text {
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 0.2s;
-      position: absolute;
-      bottom: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      margin-bottom: 0.5rem;
-      background-color: #004080;
-      /* warna tooltip lebih terang biru */
-      color: white;
-      padding: 0.5rem 0.75rem;
-      border-radius: 0.5rem;
-      white-space: nowrap;
-      font-size: 0.875rem;
-      z-index: 10;
-    }
-
-    .tooltip:hover .tooltip-text {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    .tooltip .tooltip-text::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      border-width: 5px;
-      border-style: solid;
-      border-color: #004080 transparent transparent transparent;
-      /* sesuaikan dengan bg tooltip */
-    }
-
-    @keyframes slide-down-fade-in {
-      0% {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/contact.css">
 
   <div class="max-w-6xl mx-auto px-4">
     <div class="text-center mb-12 px-6 max-w-4xl mx-auto">
@@ -75,6 +19,34 @@
       </div>
 
       <div class="w-full flex flex-wrap justify-center gap-4 px-4 max-w-screen-lg mx-auto">
+        
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/ananda-david-saputra" target="_blank" rel="noopener noreferrer"
+          class="card w-full md:w-fit flex-row items-center font-semibold gap-2 p-4 py-2 text-gray-800 bg-white rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:bg-gray-50 animate-[slide-down-fade-in_0.5s_ease-in-out] tooltip"
+          aria-label="Ananda David Saputra">
+          <i class="bx bxl-linkedin-square text-3xl text-blue-700"></i>
+          <span>Ananda David Saputra</span>
+          <span class="tooltip-text">Ananda David Saputra</span>
+        </a>
+
+        <!-- Gmail -->
+        <a href="mailto:anandadavidsaputra30@gmail.com"
+        class="card w-full md:w-fit flex flex-row items-center font-semibold gap-2 p-4 py-2 text-gray-800 bg-white rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:bg-gray-50 animate-[slide-down-fade-in_0.5s_ease-in-out] tooltip"
+        aria-label="Email anandadavidsaputra30@gmail.com">
+        <i class="bx bxl-gmail text-3xl text-red-500"></i>
+        <span class="break-all">anandadavidsaputra30@gmail.com</span>
+        <span class="tooltip-text break-all">anandadavidsaputra30@gmail.com</span>
+      </a>
+      
+      <!-- GitHub -->
+        <a href="https://github.com/anandadavidsaputra" target="_blank" rel="noopener noreferrer"
+          class="card w-full md:w-fit flex-row items-center font-semibold gap-2 p-4 py-2 text-gray-800 bg-white rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:bg-gray-50 animate-[slide-down-fade-in_0.5s_ease-in-out] tooltip"
+          aria-label="GitHub @anandadavidsaputra">
+          <i class="bx bxl-github text-3xl text-gray-900"></i>
+          <span>@anandadavidsaputra</span>
+          <span class="tooltip-text">@anandadavidsaputra</span>
+        </a>
+        
         <!-- Instagram -->
         <a href="https://www.instagram.com/andvids_uyy/" target="_blank" rel="noopener noreferrer"
           class="card w-full md:w-fit flex-row items-center font-semibold gap-2 p-4 py-2 text-gray-800 bg-white rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:bg-gray-50 animate-[slide-down-fade-in_0.5s_ease-in-out] tooltip"
@@ -84,23 +56,6 @@
           <span class="tooltip-text">@andvids_uyy</span>
         </a>
 
-        <!-- Gmail -->
-        <a href="mailto:anandadavidsaputra30@gmail.com"
-          class="card w-full md:w-fit flex flex-row items-center font-semibold gap-2 p-4 py-2 text-gray-800 bg-white rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:bg-gray-50 animate-[slide-down-fade-in_0.5s_ease-in-out] tooltip"
-          aria-label="Email anandadavidsaputra30@gmail.com">
-          <i class="bx bxl-gmail text-3xl text-red-500"></i>
-          <span class="break-all">anandadavidsaputra30@gmail.com</span>
-          <span class="tooltip-text break-all">anandadavidsaputra30@gmail.com</span>
-        </a>
-
-        <!-- GitHub -->
-        <a href="https://github.com/anandadavidsaputra" target="_blank" rel="noopener noreferrer"
-          class="card w-full md:w-fit flex-row items-center font-semibold gap-2 p-4 py-2 text-gray-800 bg-white rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:bg-gray-50 animate-[slide-down-fade-in_0.5s_ease-in-out] tooltip"
-          aria-label="GitHub @anandadavidsaputra">
-          <i class="bx bxl-github text-3xl text-gray-900"></i>
-          <span>@anandadavidsaputra</span>
-          <span class="tooltip-text">@anandadavidsaputra</span>
-        </a>
       </div>
     </div>
 </section>

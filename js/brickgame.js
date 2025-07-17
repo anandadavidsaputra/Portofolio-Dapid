@@ -293,37 +293,37 @@ function initBrickGame() {
     }
 
     // === DEV MODE ===
-document.getElementById("dev-win")?.addEventListener("click", () => {
-    if (animationId) cancelAnimationFrame(animationId);
-    state.started = true;
-    state.autoPlay = false;
-    state.running = false;
-    state.finished = false;
-    state.gameOver = false;
-    state.dx = BALL_SPEED;
-    state.dy = -BALL_SPEED;
-    devAutoDestroy();
-});
+    document.getElementById("dev-win")?.addEventListener("click", () => {
+        if (animationId) cancelAnimationFrame(animationId);
+        state.started = true;
+        state.autoPlay = false;
+        state.running = false;
+        state.finished = false;
+        state.gameOver = false;
+        state.dx = BALL_SPEED;
+        state.dy = -BALL_SPEED;
+        devAutoDestroy();
+    });
 
-   window.devAutoDestroy = function () {
-    for (let c = 0; c < BRICK_COLS; c++) {
-        for (let r = 0; r < BRICK_ROWS; r++) {
-            state.bricks[c][r].status = 0;
-            state.bricks[c][r].alpha = 0;
+    window.devAutoDestroy = function () {
+        for (let c = 0; c < BRICK_COLS; c++) {
+            for (let r = 0; r < BRICK_ROWS; r++) {
+                state.bricks[c][r].status = 0;
+                state.bricks[c][r].alpha = 0;
+            }
         }
-    }
 
-    state.score = BRICK_ROWS * BRICK_COLS;
-    document.getElementById("score").textContent = "Score: " + state.score;
+        state.score = BRICK_ROWS * BRICK_COLS;
+        document.getElementById("score").textContent = "Score: " + state.score;
 
-    // Tambahan penting:
-    state.running = false;
-    state.finished = true;
+        // Tambahan penting:
+        state.running = false;
+        state.finished = true;
 
-    render(); // <-- wajib untuk update tampilan brick yang sudah hilang
+        render(); // <-- wajib untuk update tampilan brick yang sudah hilang
 
-    setTimeout(showVictoryEffect, 300);
-};
+        setTimeout(showVictoryEffect, 300);
+    };
 
 
     window.restartGame = function () {
