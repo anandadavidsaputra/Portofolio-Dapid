@@ -1,5 +1,5 @@
 <section id="home">
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="css/home.css">
 
@@ -11,6 +11,7 @@
         </h1>
         <h1>👋</h1>
       </span>
+
       <p id="welcome-text">
         I'm <strong>Ananda David Saputra</strong>, a tech enthusiast with a strong interest in <strong>app
           development</strong> and <strong>modern user interfaces</strong>.<br><br>
@@ -21,9 +22,11 @@
         I value <strong>collaboration</strong>, constant <strong>learning</strong>, and <strong>turning</strong> rough
         thoughts into polished, usable products.
       </p>
-      <div class="language-toggle">
+
+      <div class="language-toggle flex items-center space-x-3">
         <button onclick="toggleLanguage()">🌐 Translate</button>
-        <button class="play-game-btn ml-3" onclick="openGameModal()">🎮 Play Game</button>
+        <button class="play-game-btn" onclick="openGameModal()">🎮 Play Game</button>
+        <button class="play-game-btn" onclick="openCvModal()">📄 View CV</button>
       </div>
 
       <!-- Tombol Dev Win -->
@@ -47,12 +50,21 @@
   <div id="game-modal">
     <div class="modal-content">
       <div class="close-btn" onclick="closeGameModal()">×</div>
-      <canvas id="brickGame" width="320" height="400"></canvas>
+      <canvas id="brickGame" width="330" height="400"></canvas>
       <div id="score">Score: 0</div>
       <div class="touch-buttons">
         <button id="btn-left">◀ Left</button>
         <button id="btn-right">Right ▶</button>
       </div>
+    </div>
+  </div>
+
+  <!-- Modal CV -->
+  <div id="cv-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+    <div class="bg-white p-9 rounded-lg shadow-lg w-full max-w-md relative text-center">
+      <button onclick="closeCvModal()"
+        class="absolute top-6 right-3 text-2xl font-bold text-red-500">&times;</button>
+      <img src="assets/CV.jpg" alt="CV Image" class="rounded border border-gray-300" />
     </div>
   </div>
 

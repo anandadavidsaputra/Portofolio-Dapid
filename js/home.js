@@ -41,3 +41,13 @@ function openDevWin() {
         }
     }, 300);
 }
+
+function openCvModal() {
+    document.getElementById('cv-modal').classList.add('flex');
+    document.getElementById('cv-modal').classList.remove('hidden');
+  }
+
+  function closeCvModal() {
+    document.getElementById('cv-modal').classList.add('hidden');
+    document.getElementById('cv-modal').classList.remove('flex');
+  }
