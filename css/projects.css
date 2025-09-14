@@ -168,46 +168,94 @@
     }
 }
 
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #333;
+  background: #f0f0f0;
+  box-shadow: 5px 5px 12px #ccc, -5px -5px 12px #fff;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  box-shadow: inset 3px 3px 8px #ccc, inset -3px -3px 8px #fff;
+  transform: translateY(-2px);
+  color: #004080;
+}
+
+.project-link.github {
+  color: #333;
+}
+
+.project-link.github:hover {
+  box-shadow: inset 3px 3px 8px #ccc, inset -3px -3px 8px #fff;
+  transform: translateY(-2px);
+  color: #000;
+}
+
+.html {
+    background-color: #e34c26; /* Merah khas HTML */
+}
+
+.css {
+    background-color: #264de4; /* Biru khas CSS */
+}
+
+.javascript {
+    background-color: #f5dd26; /* Kuning cerah JS */
+}
+
 .flutter {
-    background-color: #0175C2;
+    background-color: #02569b; /* Biru Flutter */
 }
 
 .php {
-    background-color: #4F5D95;
+    background-color: #8892be; /* Biru PHP */
 }
 
 .mysql {
-    background-color: #f3b304;
+    background-color: #f29111; /* Oranye MySQL */
 }
 
 .java {
-    background-color: #f89820;
+    background-color: #f89820; /* Oranye Java */
 }
 
 .android {
-    background-color: #04c042;
+    background-color: #3ddc84; /* Hijau Android */
 }
 
 .canva {
-    background-color: #00c4cc;
+    background-color: #00c4cc; /* Cyan Canva */
 }
 
 .ai-assisted {
-    background-color: #6c63ff;
+    background-color: #6c63ff; /* Ungu AI */
 }
 
 .manual-drawing {
-    background-color: #6b2181;
+    background-color: #6b2181; /* Ungu Tua */
 }
 
-.springboot {
-    background-color: #6db33f;
+.spring-boot {
+    background-color: #6db33f; /* Hijau Spring Boot */
 }
 
 .postgresql {
-    background-color: #336791;
+    background-color: #336791; /* Biru PostgreSQL */
 }
 
 .docker {
-    background-color: #0db7ed;
+    background-color: #0db7ed; /* Biru Docker */
 }

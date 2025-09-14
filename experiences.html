@@ -3,96 +3,49 @@
     <!-- Title -->
     <div class="text-center mb-16">
       <h2
-        class="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight bg-gradient-to-l from-[#001f4d] via-[#004080] to-black bg-clip-text text-transparent uppercase leading-[1.05]">
+        class="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight bg-gradient-to-l from-[#001f4d] via-[#004080] to-black bg-clip-text text-transparent uppercase leading-[1.05]"
+      >
         Experiences
       </h2>
-      <p class="mt-4 text-base sm:text-lg md:text-xl text-gray-400 max-w-xl mx-auto">
-        A glimpse of my journey, milestones, and moments that shaped who I am.
+      <p
+        class="mt-4 text-base sm:text-lg md:text-xl text-gray-400 max-w-xl mx-auto"
+      >
+        Sekilas perjalanan, pencapaian, dan momen yang membentuk diri saya.
       </p>
     </div>
 
-    <div class="columns-1 md:columns-2 lg:columns-3 gap-4">
-      <!-- Internship at Artivisi -->
-      <div
-        class="mb-4 break-inside-avoid p-4 bg-white rounded-lg shadow-md border border-[#ddd] relative overflow-hidden">
-        <div class="absolute top-0 right-0 text-white text-xs px-3 py-1 rounded-bl-lg font-semibold"
-          style="background: linear-gradient(to left, #3a6fab, #2c5d96);">
-          Internship
-        </div>
-        <h3
-          class="text-2xl font-extrabold bg-gradient-to-l pt-3 from-[#001f4d] via-[#004080] to-black bg-clip-text text-transparent mb-2">
-          PT Artivisi Intermedia
-        </h3>
-        <p class="text-gray-700 mb-4">Completed a 6-month internship focused on software development and teamwork.</p>
-        <div class="flex justify-between items-center text-sm">
-          <span class="font-semibold">2024 - 2025</span>
-          <span class="text-[#2c5d96] font-bold">#Experience</span>
-        </div>
-        <img src="assets/Experiences/pkl.jpg" alt="Internship at Artivisi"
-          class="w-full h-auto rounded-lg object-cover mt-4">
-      </div>
-
-      <!-- LKS IT Software -->
-      <div
-        class="mb-4 break-inside-avoid p-4 bg-white rounded-lg shadow-md border border-[#ddd] relative overflow-hidden">
-        <div class="absolute top-0 right-0 text-white text-xs px-3 py-1 rounded-bl-lg font-semibold"
-          style="background: linear-gradient(to left, #28b96f, #0f9d58);">
-          Consolation Prize
-        </div>
-        <h3
-          class="text-2xl font-extrabold bg-gradient-to-l pt-3 from-[#001f4d] via-[#004080] to-black bg-clip-text text-transparent mb-2">
-          LKS IT Software - Provincial Level
-        </h3>
-        <p class="text-gray-700 mb-4">Created desktop and Android applications for competition under time constraints.
-        </p>
-        <div class="flex justify-between items-center text-sm">
-          <span class="font-semibold">2024</span>
-          <span class="text-[#0f9d58] font-bold">#Competition</span>
-        </div>
-        <img src="assets/Experiences/lks2024.jpg" alt="LKS IT Software Competition"
-          class="w-full h-auto rounded-lg object-cover mt-4">
-      </div>
-
-      <!-- Art of the Year 2024 -->
-      <div
-        class="mb-4 break-inside-avoid p-4 bg-white rounded-lg shadow-md border border-[#ddd] relative overflow-hidden">
-        <div class="absolute top-0 right-0 text-white text-xs px-3 py-1 rounded-bl-lg font-semibold"
-          style="background: linear-gradient(to left, #c9a97d, #b38c5d);">
-          1st Place
-        </div>
-        <h3
-          class="text-2xl font-extrabold bg-gradient-to-l pt-3 from-[#001f4d] via-[#004080] to-black bg-clip-text text-transparent mb-2">
-          Art of the Year 2024
-        </h3>
-        <p class="text-gray-700 mb-4">Won 1st place in an infographic poster competition judged by professionals.</p>
-        <div class="flex justify-between items-center text-sm">
-          <span class="font-semibold">2024</span>
-          <span class="text-[#b38c5d] font-bold">#Winner</span>
-        </div>
-        <img src="assets/Experiences/aot2024.jpg" alt="Art of the Year 2024"
-          class="w-full h-auto rounded-lg object-cover mt-4">
-      </div>
-
-      <!-- Art of the Year 2023 -->
-      <div
-        class="mb-4 break-inside-avoid p-4 bg-white rounded-lg shadow-md border border-[#ddd] relative overflow-hidden">
-        <div class="absolute top-0 right-0 text-white text-xs px-3 py-1 rounded-bl-lg font-semibold"
-          style="background: linear-gradient(to left, #00a9d9, #007ea7);">
-          2nd Place
-        </div>
-        <h3
-          class="text-2xl font-extrabold bg-gradient-to-l pt-3 from-[#001f4d] via-[#004080] to-black bg-clip-text text-transparent mb-2">
-          Art of the Year 2023
-        </h3>
-        <p class="text-gray-700 mb-4">Achieved runner-up position in an infographic design competition with national
-          reach.</p>
-        <div class="flex justify-between items-center text-sm">
-          <span class="font-semibold">2023</span>
-          <span class="text-[#007ea7] font-bold">#RunnerUp</span>
-        </div>
-        <img src="assets/Experiences/aot2023.png" alt="Art of the Year 2023"
-          class="w-full h-auto rounded-lg object-cover mt-4">
-      </div>
-    </div>
+    <div
+      id="experience-list"
+      class="columns-1 md:columns-2 lg:columns-3 gap-4"
+    ></div>
   </div>
 </section>
+
+<script>
+  function renderExperiences(list, containerId) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = ""; // kosongkan container dulu
+    list.forEach((exp) => {
+      container.innerHTML += `
+      <div class="mb-4 break-inside-avoid p-4 bg-white rounded-lg shadow-md border border-[#ddd] relative overflow-hidden">
+        <div class="absolute top-0 right-0 text-white text-xs px-3 py-1 rounded-bl-lg font-semibold"
+          style="background: ${exp.badgeGradient};">
+          ${exp.badge}
+        </div>
+        <h3 class="text-2xl font-extrabold bg-gradient-to-l pt-3 from-[#001f4d] via-[#004080] to-black bg-clip-text text-transparent mb-2">
+          ${exp.title}
+        </h3>
+        <p class="text-gray-700 mb-4">${exp.desc}</p>
+        <div class="flex justify-between items-center text-sm">
+          <span class="font-semibold">${exp.year}</span>
+          <span class="font-bold" style="color: ${exp.tagColor};">${exp.tag}</span>
+        </div>
+        <img src="${exp.img}" alt="${exp.alt}"
+          class="w-full h-auto rounded-lg object-cover mt-4">
+      </div>
+      `;
+    });
+  }
+
+  renderExperiences(experiences, "experience-list");
+</script>
