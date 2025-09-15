@@ -93,6 +93,17 @@ const techProjects = [
     linkText: "Buka Aplikasi",
     link: "https://anandadavidsaputra.github.io/ValutaGo",
   },
+  {
+    title: "Moodly",
+    desc: "Aplikasi web sederhana untuk memudahkan pengguna mencatat mood harian dan melihat statistik suasana hati.",
+    images: [
+      "assets/Moodly/logo.png", 
+      "assets/Moodly/view.png"
+    ],
+    tech: ["HTML", "CSS", "JavaScript"],
+    linkText: "Buka Aplikasi",
+    link: "https://anandadavidsaputra.github.io/Moodly",
+  },
 ];
 const artProjects = [
   {
