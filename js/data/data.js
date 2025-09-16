@@ -104,6 +104,17 @@ const techProjects = [
     linkText: "Buka Aplikasi",
     link: "https://anandadavidsaputra.github.io/Moodly",
   },
+  {
+    title: "Unitiverse",
+    desc: "Aplikasi web sederhana untuk mengkonversi satuan ukur dan menampilkan fun facts yang menarik.",
+    images: [
+      "assets/Unitiverse/logo.png", 
+      "assets/Unitiverse/view.png"
+    ],
+    tech: ["HTML", "CSS", "JavaScript"],
+    linkText: "Buka Aplikasi",
+    link: "https://anandadavidsaputra.github.io/Unitiverse",
+  },
 ];
 const artProjects = [
   {
