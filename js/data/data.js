@@ -115,6 +115,17 @@ const techProjects = [
     linkText: "Buka Aplikasi",
     link: "https://anandadavidsaputra.github.io/Unitiverse",
   },
+  {
+    title: "KorupSmash",
+    desc: "Game web sederhana untuk menghantam tikus berdasi sebagai hiburan bertema korupsi.",
+    images: [
+      "assets/KorupSmash/logo.png", 
+      "assets/KorupSmash/view.png"
+    ],
+    tech: ["HTML", "CSS", "JavaScript"],
+    linkText: "Buka Aplikasi",
+    link: "https://anandadavidsaputra.github.io/KorupSmash",
+  },
 ];
 const artProjects = [
   {
