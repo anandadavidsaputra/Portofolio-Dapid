@@ -94,7 +94,7 @@ function updatePageTitle() {
         contact: "Contact",
     };
     const section = titleMap[hash] || hash.charAt(0).toUpperCase() + hash.slice(1);
-    document.title = `David Space | ${section}`;
+    document.title = `David's Space | ${section}`;
 }
 
 window.addEventListener('DOMContentLoaded', updatePageTitle);

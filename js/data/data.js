@@ -85,10 +85,7 @@ const techProjects = [
   {
     title: "ValutaGo",
     desc: "Aplikasi web sederhana untuk memudahkan pengguna mengecek kurs mata uang dan menghitung konversi dengan cepat.",
-    images: [
-      "assets/ValutaGo/logo.png", 
-      "assets/ValutaGo/view.png"
-    ],
+    images: ["assets/ValutaGo/logo.png", "assets/ValutaGo/view.png"],
     tech: ["HTML", "CSS", "JavaScript"],
     linkText: "Buka Aplikasi",
     link: "https://anandadavidsaputra.github.io/ValutaGo",
@@ -96,10 +93,7 @@ const techProjects = [
   {
     title: "Moodly",
     desc: "Aplikasi web sederhana untuk memudahkan pengguna mencatat mood harian dan melihat statistik suasana hati.",
-    images: [
-      "assets/Moodly/logo.png", 
-      "assets/Moodly/view.png"
-    ],
+    images: ["assets/Moodly/logo.png", "assets/Moodly/view.png"],
     tech: ["HTML", "CSS", "JavaScript"],
     linkText: "Buka Aplikasi",
     link: "https://anandadavidsaputra.github.io/Moodly",
@@ -107,10 +101,7 @@ const techProjects = [
   {
     title: "Unitiverse",
     desc: "Aplikasi web sederhana untuk mengkonversi satuan ukur dan menampilkan fun facts yang menarik.",
-    images: [
-      "assets/Unitiverse/logo.png", 
-      "assets/Unitiverse/view.png"
-    ],
+    images: ["assets/Unitiverse/logo.png", "assets/Unitiverse/view.png"],
     tech: ["HTML", "CSS", "JavaScript"],
     linkText: "Buka Aplikasi",
     link: "https://anandadavidsaputra.github.io/Unitiverse",
@@ -118,10 +109,7 @@ const techProjects = [
   {
     title: "KorupSmash",
     desc: "Game web sederhana untuk menghantam tikus berdasi sebagai hiburan bertema korupsi.",
-    images: [
-      "assets/KorupSmash/logo.png", 
-      "assets/KorupSmash/view.png"
-    ],
+    images: ["assets/KorupSmash/logo.png", "assets/KorupSmash/view.png"],
     tech: ["HTML", "CSS", "JavaScript"],
     linkText: "Buka Aplikasi",
     link: "https://anandadavidsaputra.github.io/KorupSmash",
@@ -174,17 +162,65 @@ const artProjects = [
 // certificates
 const certificates = [
   {
+    img: "assets/Certificates/sertifikat-masta-usm.jpg",
+    title: "MASTA IMM Saintek Muhammadiyah",
+    desc: `Sertifikat partisipasi atas keikutsertaan sebagai <strong>peserta</strong> dalam kegiatan <strong>Masa Ta’aruf Ikatan Mahasiswa Muhammadiyah (MASTA)</strong> dengan tema kepemimpinan yang berintegritas dan progresif.`,
+    year: "2025",
+    tag: "#Leadership",
+    tagColor: "#c62828",
+  },
+  {
+    img: "assets/Certificates/sertifikat-lomba-essay-gema-aksara-5.png",
+    title: "Essay Competition Gema Aksara 5.0",
+    desc: `Sertifikat penghargaan atas partisipasi sebagai <strong>peserta</strong> dalam <strong>Essay Competition Gema Aksara 5.0</strong> dengan tema <strong>“Smart Steps for a Fast World: Youth Innovation and Logical Thinking in Facing Global Challenges”</strong>.`,
+    year: "2025",
+    tag: "#EssayCompetition",
+    tagColor: "#0d47a1",
+  },
+  {
+    img: "assets/Certificates/sertifikat-seminar-hoax-usm.jpg",
+    title: "Seminar Zona Informasi Bebas Hoax",
+    desc: `Sertifikat partisipasi diberikan sebagai <strong>peserta</strong> dalam seminar <strong>Zona Informasi Bebas Hoax</strong> yang diselenggarakan oleh <strong>BEM Fakultas Ilmu Komputer Universitas Saintek Muhammadiyah</strong>.`,
+    year: "2025",
+    tag: "#Seminar",
+    tagColor: "#8b1e1e",
+  },
+  {
+    img: "assets/Certificates/sertifikat-lsf-gnbsm.jpg",
+    title: "Penguatan Budaya Sensor Mandiri",
+    desc: `Sertifikat partisipasi sebagai <strong>peserta</strong> dalam kegiatan Penguatan Gerakan Nasional Budaya Sensor Mandiri (GNBSM) yang diselenggarakan oleh <strong>Lembaga Sensor Film Republik Indonesia</strong>.`,
+    year: "2025",
+    tag: "#LSF",
+    tagColor: "#e8c413",
+  },
+  {
+    img: "assets/Certificates/sertifikat-propam-usm.jpg",
+    title: "PROPAM Saintek Muhammadiyah",
+    desc: `Sertifikat partisipasi sebagai <strong>peserta</strong> dalam kegiatan <strong>Program Pengenalan Almamater dan Kemuhammadiyahan (PROPAM)</strong> Universitas Saintek Muhammadiyah dengan tema <strong>"Generasi Visioner di Era Digital"</strong>.`,
+    year: "2025",
+    tag: "#PROPAM",
+    tagColor: "#0042c7",
+  },
+  {
+    img: "assets/Certificates/sertifikat-usk.jpg",
+    title: "Sertifikat Kompetensi BNSP - Junior Coder",
+    desc: `Sertifikat kompetensi yang menyatakan <strong>kompeten</strong> pada bidang <strong>Software Development (Pemrograman)</strong> dengan kualifikasi <strong>Okupasi Pemrogram Junior</strong>.`,
+    year: "2025",
+    tag: "#BNSP",
+    tagColor: "#45252a",
+  },
+  {
     img: "assets/Certificates/sertifikat-seminar-unsada.jpg",
     title: "Industry-Ready Talents - Unsada",
-    desc: `Sertifikat partisipasi diberikan kepada <strong>Ananda David Saputra</strong> dalam seminar "<strong>Building Industry-Ready Talents: Strategies & Career Opportunities</strong>" yang diselenggarakan di <strong>Universitas Darma Persada</strong>`,
+    desc: `Sertifikat partisipasi diberikan dalam seminar "<strong>Building Industry-Ready Talents: Strategies & Career Opportunities</strong>" yang diselenggarakan di <strong>Universitas Darma Persada</strong>`,
     year: "2025",
     tag: "#SeminarKarir",
-    tagColor: "#9097d6",
+    tagColor: "#8169c7",
   },
   {
     img: "assets/Certificates/sertifikat-pkl.jpg",
     title: "Sertifikat Magang - Artivisi",
-    desc: `Sertifikat magang diberikan kepada <strong>Ananda David Saputra</strong> atas kontribusinya dalam <strong>pengembangan perangkat lunak</strong> di <strong>PT Artivisi Intermedia</strong>`,
+    desc: `Sertifikat magang diberikan atas kontribusinya dalam <strong>pengembangan perangkat lunak</strong> di <strong>PT Artivisi Intermedia</strong>`,
     year: "2024 - 2025",
     tag: "#Magang",
     tagColor: "#338c03",
