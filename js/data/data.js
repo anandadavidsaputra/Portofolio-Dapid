@@ -49,7 +49,7 @@ const experiences = [
 // Projects
 const techProjects = [
   {
-    title: "Emang GItu",
+    title: "Emang Gitu",
     desc: "Aplikasi kuis interaktif untuk menampilkan gambaran diri pengguna dari jawaban yang dipilih.",
     images: ["assets/Emang Gitu/logo.png", "assets/Emang Gitu/view.png"],
     tech: ["HTML", "CSS", "JavaScript"],
