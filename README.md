@@ -45,3 +45,5 @@ This website serves as a central personal branding platform to support professio
 ## 📄 License
 
 This project is intended for personal portfolio purposes.
+
+---
