@@ -1,6 +1,28 @@
 // Experiences
 const experiences = [
   {
+    title: "LDKM BEM Fasilkom USM",
+    desc: "Mengikuti Latihan Dasar Kepemimpinan Mahasiswa (LDKM) yang diselenggarakan oleh BEM Fasilkom Universitas Saintek Muhammadiyah untuk mengembangkan jiwa kepemimpinan dan organisasi.",
+    year: "2026",
+    tag: "#Leadership",
+    tagColor: "#c62828",
+    badge: "LDKM",
+    badgeGradient: "linear-gradient(to left, #e53935, #c62828)",
+    img: "assets/Experiences/ldkm-bem-fasilkom-2026.jpeg",
+    alt: "LDKM BEM Fasilkom USM",
+  },
+  {
+  title: "MASTA IMM Saintekmu 2025",
+  desc: "Mengikuti Masa Ta'aruf (MASTA) yang diselenggarakan oleh IMM Saintekmu sebagai pengenalan organisasi dan pembentukan karakter kepemimpinan.",
+  year: "2025",
+  tag: "#Organization",
+  tagColor: "#fa7d3e",
+  badge: "MASTA",
+  badgeGradient: "linear-gradient(to left, #ff9a5a, #fa7d3e)",
+  img: "assets/Experiences/masta-imm-saintekmu-2025.jpg",
+  alt: "MASTA IMM Saintekmu 2025",
+},
+  {
     title: "PT Artivisi Intermedia",
     desc: "Menyelesaikan magang 6 bulan dengan fokus pada pengembangan perangkat lunak dan kerja tim.",
     year: "2024 - 2025",
@@ -41,7 +63,7 @@ const experiences = [
     tagColor: "#007ea7",
     badge: "Juara 2",
     badgeGradient: "linear-gradient(to left, #00a9d9, #007ea7)",
-    img: "assets/Experiences/aot2022.png",
+    img: "assets/Experiences/aot2022.jpg",
     alt: "Art of the Year 2022",
   },
 ];
@@ -51,7 +73,10 @@ const techProjects = [
   {
     title: "Emang Gitu",
     desc: "Aplikasi kuis interaktif untuk menampilkan gambaran diri pengguna dari jawaban yang dipilih.",
-    images: ["assets/Emang Gitu/logo.png", "assets/Emang Gitu/view.png"],
+    images: [
+      "assets/Projects/Tech/Emang Gitu/logo.png",
+      "assets/Projects/Tech/Emang Gitu/view.png",
+    ],
     tech: ["HTML", "CSS", "JavaScript"],
     linkText: "Buka Aplikasi",
     link: "https://anandadavidsaputra.github.io/Emang-Gitu",
@@ -59,7 +84,10 @@ const techProjects = [
   {
     title: "KorupSmash",
     desc: "Game web sederhana untuk menghantam tikus berdasi sebagai hiburan bertema korupsi.",
-    images: ["assets/KorupSmash/logo.png", "assets/KorupSmash/view.png"],
+    images: [
+      "assets/Projects/Tech/KorupSmash/logo.png",
+      "assets/Projects/Tech/KorupSmash/view.png",
+    ],
     tech: ["HTML", "CSS", "JavaScript"],
     linkText: "Buka Aplikasi",
     link: "https://anandadavidsaputra.github.io/KorupSmash",
@@ -67,7 +95,10 @@ const techProjects = [
   {
     title: "Unitiverse",
     desc: "Aplikasi web sederhana untuk mengkonversi satuan ukur dan menampilkan fun facts yang menarik.",
-    images: ["assets/Unitiverse/logo.png", "assets/Unitiverse/view.png"],
+    images: [
+      "assets/Projects/Tech/Unitiverse/logo.png",
+      "assets/Projects/Tech/Unitiverse/view.png",
+    ],
     tech: ["HTML", "CSS", "JavaScript"],
     linkText: "Buka Aplikasi",
     link: "https://anandadavidsaputra.github.io/Unitiverse",
@@ -75,7 +106,10 @@ const techProjects = [
   {
     title: "Moodly",
     desc: "Aplikasi web sederhana untuk memudahkan pengguna mencatat mood harian dan melihat statistik suasana hati.",
-    images: ["assets/Moodly/logo.png", "assets/Moodly/view.png"],
+    images: [
+      "assets/Projects/Tech/Moodly/logo.png",
+      "assets/Projects/Tech/Moodly/view.png",
+    ],
     tech: ["HTML", "CSS", "JavaScript"],
     linkText: "Buka Aplikasi",
     link: "https://anandadavidsaputra.github.io/Moodly",
@@ -83,7 +117,10 @@ const techProjects = [
   {
     title: "ValutaGo",
     desc: "Aplikasi web sederhana untuk memudahkan pengguna mengecek kurs mata uang dan menghitung konversi dengan cepat.",
-    images: ["assets/ValutaGo/logo.png", "assets/ValutaGo/view.png"],
+    images: [
+      "assets/Projects/Tech/ValutaGo/logo.png",
+      "assets/Projects/Tech/ValutaGo/view.png",
+    ],
     tech: ["HTML", "CSS", "JavaScript"],
     linkText: "Buka Aplikasi",
     link: "https://anandadavidsaputra.github.io/ValutaGo",
@@ -91,7 +128,10 @@ const techProjects = [
   {
     title: "PresenTen",
     desc: "Aplikasi mobile untuk mencatat presensi dengan lebih mudah dan meningkatkan akurasi harian.",
-    images: ["assets/PresenTen/logo.png", "assets/PresenTen/view.png"],
+    images: [
+      "assets/Projects/Tech/PresenTen/logo.png",
+      "assets/Projects/Tech/PresenTen/view.png",
+    ],
     tech: ["Flutter", "PHP", "MySQL"],
     linkText: "Lihat Github",
     link: "https://github.com/AnandaDavidSaputra/PresenTen",
@@ -100,8 +140,8 @@ const techProjects = [
     title: "Sahabat Qur’an (Web)",
     desc: "Sistem web terpusat untuk mengelola kelas Al-Qur’an, peserta, materi, dan catatan akademik.",
     images: [
-      "assets/Sahabat Quran Web/logo.png",
-      "assets/Sahabat Quran Web/view.png",
+      "assets/Projects/Tech/Sahabat Quran Web/logo.png",
+      "assets/Projects/Tech/Sahabat Quran Web/view.png",
     ],
     tech: ["Spring-Boot", "PostgreSQL", "Docker"],
   },
@@ -109,15 +149,18 @@ const techProjects = [
     title: "Sahabat Qur’an (Mobile)",
     desc: "Aplikasi mobile untuk membantu belajar Al-Qur’an dengan cara yang terstruktur dan menyenangkan.",
     images: [
-      "assets/Sahabat Quran Mobile/logo.png",
-      "assets/Sahabat Quran Mobile/view.png",
+      "assets/Projects/Tech/Sahabat Quran Mobile/logo.png",
+      "assets/Projects/Tech/Sahabat Quran Mobile/view.png",
     ],
     tech: ["Flutter", "Canva"],
   },
   {
     title: "Sedu",
     desc: "Aplikasi Android sederhana untuk memudahkan pengguna melihat menu dan memesan kopi.",
-    images: ["assets/Sedu/logo.png", "assets/Sedu/view.png"],
+    images: [
+      "assets/Projects/Tech/Sedu/logo.png",
+      "assets/Projects/Tech/Sedu/view.png",
+    ],
     tech: ["Android", "Java"],
     linkText: "Lihat Github",
     link: "https://github.com/AnandaDavidSaputra/Sedu",
@@ -128,14 +171,14 @@ const artProjects = [
   {
     title: "UMKM Naik Kelas",
     desc: `Infografis singkat tentang transformasi digital UMKM untuk mendorong pertumbuhan ekonomi berkelanjutan.`,
-    images: ["assets/Art/umkm-naik-kelas.jpg"],
+    images: ["assets/Projects/Art/umkm-naik-kelas.jpg"],
     tech: ["Canva", "AI-Assisted"],
   },
   {
     title: "Fakta Menarik Daun Pepaya",
     desc: `Infografis singkat tentang manfaat kesehatan dan potensi ekonomi daun pepaya.
           <br><span class="template-cta">Tertarik membuat versi sendiri? <a href="https://lynk.id/anandadavidsaputra/ekp333oeqn6m" target="_blank">Klik di sini</a>.</span>`,
-    images: ["assets/Art/fakta-menarik-daun-pepaya.png"],
+    images: ["assets/Projects/Art/fakta-menarik-daun-pepaya.png"],
     tech: ["Canva", "AI-Assisted"],
   },
   {
@@ -143,39 +186,55 @@ const artProjects = [
     desc: `Poster naratif visual tentang jurnalisme beradaptasi dengan kreativitas, teknologi, dan audiens di era digital.
           <br><span class="template-cta">Tertarik membuat versi sendiri? <a href="https://lynk.id/anandadavidsaputra/y50ppp1ne84d" target="_blank">Klik di sini</a>.</span>`,
     images: [
-      "assets/Art/kreativitas-jurnalisme-di-tengah-gelombang-transformasi.png",
+      "assets/Projects/Art/kreativitas-jurnalisme-di-tengah-gelombang-transformasi.png",
     ],
     tech: ["Canva", "AI-Assisted"],
   },
   {
     title: "Tahun Baru Resolusi 2023",
     desc: "Poster edukasi buatan tangan tentang resolusi tahun baru dengan konsep DUIT (Doa, Usaha, Ikhtiar, Tawakal).",
-    images: ["assets/Art/tahun-baru-resolusi-2023.jpg"],
+    images: ["assets/Projects/Art/tahun-baru-resolusi-2023.jpg"],
     tech: ["Manual Drawing"],
   },
   {
     title: "Jembatan Mimpi",
     desc: `Poster drama yang menggambarkan harapan dan mimpi sebagai jembatan menuju masa depan.
           <br><span class="template-cta">Tertarik membuat versi sendiri? <a href="https://lynk.id/anandadavidsaputra/qm6llg2kw824" target="_blank">Klik di sini</a>.</span>`,
-    images: ["assets/Art/jembatan-mimpi.png"],
+    images: ["assets/Projects/Art/jembatan-mimpi.png"],
     tech: ["Canva"],
   },
   {
     title: "Logo Mochi Moo",
     desc: "Logo dessert mochi dengan gaya lucu dan kekinian, dibuat dalam proyek kewirausahaan kelompok.",
-    images: ["assets/Art/mochi-moo.png"],
+    images: ["assets/Projects/Art/mochi-moo.png"],
     tech: ["Canva", "AI-Assisted"],
   },
   {
     title: "Logo Dapoer Azizah",
     desc: "Logo hasil proyek kelas yang terpilih sebagai desain terbaik, menggambarkan nuansa hangat dan sederhana dari usaha kuliner rumahan.",
-    images: ["assets/Art/dapoer-azizah.png"],
+    images: ["assets/Projects/Art/dapoer-azizah.png"],
     tech: ["Canva", "AI-Assisted"],
   },
 ];
 
 // certificates
 const certificates = [
+  {
+    img: "assets/Certificates/sertifikat-uiux-smart-it.png", // Sesuaikan nama filenya
+    title: "Peserta Smart IT Competition 2026",
+    desc: `Sertifikat partisipasi sebagai <strong>peserta</strong> dalam kompetisi <strong>UI/UX Design</strong> pada ajang <strong>Smart IT Competition 2026</strong> yang diselenggarakan untuk menguji kreativitas dalam perancangan antarmuka pengguna.`,
+    year: "2026",
+    tag: "#UIUX",
+    tagColor: "#54ab99",
+  },
+  {
+    img: "assets/Certificates/sertifikat-seminar-pancasila.png",
+    title: "Seminar Pancasila USM",
+    desc: `Sertifikat partisipasi atas keikutsertaan sebagai <strong>peserta</strong> dalam kegiatan <strong>Seminar Pancasila</strong> dengan tema "Pancasila Dalam Bingkai Moderasi Beragama" yang diselenggarakan di Universitas Saintek Muhammadiyah.`,
+    year: "2026",
+    tag: "#Pancasila",
+    tagColor: "#072d4f",
+  },
   {
     img: "assets/Certificates/sertifikat-masta-usm.jpg",
     title: "MASTA IMM Saintek Muhammadiyah",
@@ -225,7 +284,7 @@ const certificates = [
     tagColor: "#45252a",
   },
   {
-    img: "assets/Certificates/sertifikat-seminar-unsada.jpg",
+    img: "assets/Certificates/sertifikat-seminar-unsada.png",
     title: "Industry-Ready Talents - Unsada",
     desc: `Sertifikat partisipasi diberikan dalam seminar "<strong>Building Industry-Ready Talents: Strategies & Career Opportunities</strong>" yang diselenggarakan di <strong>Universitas Darma Persada</strong>`,
     year: "2025",
