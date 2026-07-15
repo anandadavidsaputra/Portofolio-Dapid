@@ -1,29 +1,47 @@
 <section id="certificates">
   <link rel="stylesheet" href="css/certificates.css" />
 
-  <div class="max-w-6xl mx-auto px-4">
-    <!-- Judul -->
-    <div class="text-center mb-16">
-      <h2
-        class="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight
-               bg-gradient-to-l from-[#001f4d] via-[#004080] to-black
-               bg-clip-text text-transparent uppercase leading-[1.05]"
-      >
-        Certificates
-      </h2>
-      <p
-        class="mt-4 text-base sm:text-lg md:text-xl text-gray-400 max-w-xl mx-auto"
-      >
-        Pengakuan resmi atas kemampuan dan pencapaian saya.
-      </p>
-    </div>
-
-    <!-- Grid -->
-    <div
-      id="certificate-grid"
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"
-    ></div>
+  <!-- Title -->
+   <div class="text-center mb-12 px-6 max-w-4xl mx-auto">
+    <h2
+      class="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight bg-gradient-to-l from-[#001f4d] via-[#004080] to-black bg-clip-text text-transparent uppercase leading-[1.05]"
+    >
+      Certificates
+    </h2>
+    <p
+      class="mt-4 text-base sm:text-lg md:text-xl text-gray-400 leading-relaxed"
+    >
+      Pengakuan resmi atas kemampuan teknis, kompetensi industri, dan pengalaman pengembangan diri saya.
+    </p>
   </div>
+
+  <!-- Wrapper Konten Utama -->
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <!-- Bagian 1: Professional & Competency -->
+    <div class="text-left mb-6">
+      <h3
+        class="text-3xl font-extrabold tracking-tight bg-gradient-to-l from-[#001f4d] via-[#004080] to-black bg-clip-text text-transparent uppercase mb-4"
+      >
+        Professional & Competency
+      </h3>
+    </div>
+    <div id="professional-certificates" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch mb-12"></div>
+
+    <!-- Bagian 2: Development & Seminar -->
+    <div class="text-left mb-6 mt-12">
+      <h3
+        class="text-3xl font-extrabold tracking-tight bg-gradient-to-l from-[#001f4d] via-[#004080] to-black bg-clip-text text-transparent uppercase mb-4"
+      >
+        Development & Seminar
+      </h3>
+    </div>
+    <div id="development-certificates" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"></div>
+    
+  </div>
+
+  <!-- Panggil data array eksternal -->
+  <script src="js/certificates-data.js"></script>
 
   <script>
     function renderCertificates(list, containerId) {
@@ -33,21 +51,16 @@
       list.forEach((c) => {
         container.innerHTML += `
           <div class="certificate-card flex flex-col h-full bg-white rounded-lg shadow-md border border-[#ddd] overflow-hidden">
-            
-            <!-- Gambar ASLI (TANPA CROP) -->
+            <!-- Gambar Asli (Tanpa Crop) -->
             <img
               src="${c.img}"
               alt="${c.title}"
               class="w-full"
             />
 
-            <!-- Wrapper konten -->
+            <!-- Konten Deskripsi -->
             <div class="flex flex-col flex-grow p-4">
-              
-              <!-- Spacer: ruang kosong antara gambar dan teks -->
               <div class="flex-grow"></div>
-
-              <!-- Konten bawah -->
               <div>
                 <h3
                   class="text-2xl font-bold bg-gradient-to-l
@@ -56,25 +69,24 @@
                 >
                   ${c.title}
                 </h3>
-
                 <p class="text-gray-700 mb-3">
                   ${c.desc}
                 </p>
-
-                <div class="flex justify-between text-sm">
+                <div class="flex justify-between text-sm mt-auto">
                   <span><strong>${c.year}</strong></span>
                   <span class="font-bold" style="color: ${c.tagColor};">
                     ${c.tag}
                   </span>
                 </div>
               </div>
-
             </div>
           </div>
         `;
       });
     }
 
-    renderCertificates(certificates, "certificate-grid");
+    // Eksekusi fungsi render setelah data terload
+    renderCertificates(professionalCertificates, "professional-certificates");
+    renderCertificates(developmentCertificates, "development-certificates");
   </script>
 </section>

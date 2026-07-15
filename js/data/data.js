@@ -1,4 +1,6 @@
-// Experiences
+// ==========================================
+// 1. EXPERIENCES
+// ==========================================
 const experiences = [
   {
     title: "LDKM BEM Fasilkom USM",
@@ -12,16 +14,16 @@ const experiences = [
     alt: "LDKM BEM Fasilkom USM",
   },
   {
-  title: "MASTA IMM Saintekmu 2025",
-  desc: "Mengikuti Masa Ta'aruf (MASTA) yang diselenggarakan oleh IMM Saintekmu sebagai pengenalan organisasi dan pembentukan karakter kepemimpinan.",
-  year: "2025",
-  tag: "#Organization",
-  tagColor: "#fa7d3e",
-  badge: "MASTA",
-  badgeGradient: "linear-gradient(to left, #ff9a5a, #fa7d3e)",
-  img: "assets/Experiences/masta-imm-saintekmu-2025.jpg",
-  alt: "MASTA IMM Saintekmu 2025",
-},
+    title: "MASTA IMM Saintekmu 2025",
+    desc: "Mengikuti Masa Ta'aruf (MASTA) yang diselenggarakan oleh IMM Saintekmu sebagai pengenalan organisasi dan pembentukan karakter kepemimpinan.",
+    year: "2025",
+    tag: "#Organization",
+    tagColor: "#fa7d3e",
+    badge: "MASTA",
+    badgeGradient: "linear-gradient(to left, #ff9a5a, #fa7d3e)",
+    img: "assets/Experiences/masta-imm-saintekmu-2025.jpg",
+    alt: "MASTA IMM Saintekmu 2025",
+  },
   {
     title: "PT Artivisi Intermedia",
     desc: "Menyelesaikan magang 6 bulan dengan fokus pada pengembangan perangkat lunak dan kerja tim.",
@@ -68,7 +70,11 @@ const experiences = [
   },
 ];
 
-// Projects
+// ==========================================
+// 2. PROJECTS
+// ==========================================
+
+// --- Tech Projects ---
 const techProjects = [
   {
     title: "Emang Gitu",
@@ -167,6 +173,7 @@ const techProjects = [
   },
 ];
 
+// --- Art Projects ---
 const artProjects = [
   {
     title: "UMKM Naik Kelas",
@@ -177,14 +184,14 @@ const artProjects = [
   {
     title: "Fakta Menarik Daun Pepaya",
     desc: `Infografis singkat tentang manfaat kesehatan dan potensi ekonomi daun pepaya.
-          <br><span class="template-cta">Tertarik membuat versi sendiri? <a href="https://lynk.id/anandadavidsaputra/ekp333oeqn6m" target="_blank">Klik di sini</a>.</span>`,
+           <br><span class="template-cta">Tertarik membuat versi sendiri? <a href="https://lynk.id/anandadavidsaputra/ekp333oeqn6m" target="_blank">Klik di sini</a>.</span>`,
     images: ["assets/Projects/Art/fakta-menarik-daun-pepaya.png"],
     tech: ["Canva", "AI-Assisted"],
   },
   {
     title: "Kreativitas Jurnalisme di Tengah Gelombang Transformasi",
     desc: `Poster naratif visual tentang jurnalisme beradaptasi dengan kreativitas, teknologi, dan audiens di era digital.
-          <br><span class="template-cta">Tertarik membuat versi sendiri? <a href="https://lynk.id/anandadavidsaputra/y50ppp1ne84d" target="_blank">Klik di sini</a>.</span>`,
+           <br><span class="template-cta">Tertarik membuat versi sendiri? <a href="https://lynk.id/anandadavidsaputra/y50ppp1ne84d" target="_blank">Klik di sini</a>.</span>`,
     images: [
       "assets/Projects/Art/kreativitas-jurnalisme-di-tengah-gelombang-transformasi.png",
     ],
@@ -199,7 +206,7 @@ const artProjects = [
   {
     title: "Jembatan Mimpi",
     desc: `Poster drama yang menggambarkan harapan dan mimpi sebagai jembatan menuju masa depan.
-          <br><span class="template-cta">Tertarik membuat versi sendiri? <a href="https://lynk.id/anandadavidsaputra/qm6llg2kw824" target="_blank">Klik di sini</a>.</span>`,
+           <br><span class="template-cta">Tertarik membuat versi sendiri? <a href="https://lynk.id/anandadavidsaputra/qm6llg2kw824" target="_blank">Klik di sini</a>.</span>`,
     images: ["assets/Projects/Art/jembatan-mimpi.png"],
     tech: ["Canva"],
   },
@@ -217,20 +224,84 @@ const artProjects = [
   },
 ];
 
-// certificates
-const certificates = [
+// ==========================================
+// 3. CERTIFICATES
+// ==========================================
+
+// --- Kredensial Profesional, Kompetensi & Lomba ---
+const professionalCertificates = [
   {
-    img: "assets/Certificates/sertifikat-uiux-smart-it.png", // Sesuaikan nama filenya
+    img: "assets/Certificates/sertifikat-uiux-smart-it.png",
     title: "Peserta Smart IT Competition 2026",
-    desc: `Sertifikat partisipasi sebagai <strong>peserta</strong> dalam kompetisi <strong>UI/UX Design</strong> pada ajang <strong>Smart IT Competition 2026</strong> yang diselenggarakan untuk menguji kreativitas dalam perancangan antarmuka pengguna.`,
+    desc: `Kompetisi <strong>UI/UX Design</strong> pada ajang Smart IT Competition 2026 untuk menguji kreativitas perancangan antarmuka pengguna.`,
     year: "2026",
     tag: "#UIUX",
     tagColor: "#54ab99",
   },
   {
+    img: "assets/Certificates/sertifikat-lomba-essay-gema-aksara-5.png",
+    title: "Essay Competition Gema Aksara 5.0",
+    desc: `Kompetisi esai dengan tema <strong>“Smart Steps for a Fast World: Youth Innovation and Logical Thinking in Facing Global Challenges”</strong>.`,
+    year: "2025",
+    tag: "#EssayCompetition",
+    tagColor: "#0d47a1",
+  },
+  {
+    img: "assets/Certificates/sertifikat-usk.jpg",
+    title: "Sertifikat Kompetensi BNSP - Junior Coder",
+    desc: `Sertifikasi resmi BNSP yang menyatakan <strong>kompeten</strong> pada kualifikasi <strong>Okupasi Pemrogram Junior (Junior Coder)</strong>.`,
+    year: "2025",
+    tag: "#BNSP",
+    tagColor: "#45252a",
+  },
+  {
+    img: "assets/Certificates/sertifikat-pkl.jpg",
+    title: "Sertifikat Magang - Artivisi",
+    desc: `Magang industri dalam proyek <strong>pengembangan perangkat lunak (software development)</strong> di PT Artivisi Intermedia.`,
+    year: "2024 - 2025",
+    tag: "#Magang",
+    tagColor: "#338c03",
+  },
+  {
+    img: "assets/Certificates/sertifikat-lks.jpg",
+    title: "IT Software Solution - LKS",
+    desc: `Meraih <strong>Juara Harapan 1</strong> bidang IT Software Solution for Business di LKS 2024 Jakarta Timur II mewakili SMKN 10 Jakarta.`,
+    year: "2024",
+    tag: "#KompetisiIT",
+    tagColor: "#22b0f2",
+  },
+  {
+    img: "assets/Certificates/sertifikat-infografis-uki.jpg",
+    title: "Poster Infografis - UKI",
+    desc: `Kompetisi desain poster infografis pada Festival Jurnalistik oleh LPM GEMA FH <strong>Universitas Kristen Indonesia</strong>.`,
+    year: "2024",
+    tag: "#Infografis",
+    tagColor: "#011978",
+  },
+  {
+    img: "assets/Certificates/sertifikat-pelatihan-kominfo.jpg",
+    title: "Pelatihan Dasar Cyber Security - Kominfo",
+    desc: `Pelatihan intensif 12 jam mengenai <strong>dasar-dasar keamanan siber</strong> oleh Puslitbang SDP3I Kominfo.`,
+    year: "2024",
+    tag: "#KeamananSiber",
+    tagColor: "#026ead",
+  },
+];
+
+// --- Seminar, Organisasi & Kegiatan Kampus ---
+const developmentCertificates = [
+  {
+  img: "assets/Certificates/sertifikat-ldkm-2026.jpeg",
+  title: "LDKM BEM Fasilkom USM",
+  desc: `Kegiatan <strong>Latihan Dasar Kepemimpinan Mahasiswa (LDKM)</strong> oleh BEM Fasilkom USM untuk membentuk karakter visioner dan berintegritas.`,
+  year: "2026",
+  tag: "#Leadership",
+  tagColor: "#c62828",
+},
+  {
     img: "assets/Certificates/sertifikat-seminar-pancasila.png",
     title: "Seminar Pancasila USM",
-    desc: `Sertifikat partisipasi atas keikutsertaan sebagai <strong>peserta</strong> dalam kegiatan <strong>Seminar Pancasila</strong> dengan tema "Pancasila Dalam Bingkai Moderasi Beragama" yang diselenggarakan di Universitas Saintek Muhammadiyah.`,
+    desc: `Seminar Pancasila bertema <strong>"Pancasila Dalam Bingkai Moderasi Beragama"</strong> di Universitas Saintek Muhammadiyah.`,
     year: "2026",
     tag: "#Pancasila",
     tagColor: "#072d4f",
@@ -238,23 +309,15 @@ const certificates = [
   {
     img: "assets/Certificates/sertifikat-masta-usm.jpg",
     title: "MASTA IMM Saintek Muhammadiyah",
-    desc: `Sertifikat partisipasi atas keikutsertaan sebagai <strong>peserta</strong> dalam kegiatan <strong>Masa Ta’aruf Ikatan Mahasiswa Muhammadiyah (MASTA)</strong> dengan tema kepemimpinan yang berintegritas dan progresif.`,
+    desc: `Kegiatan <strong>Masa Ta’aruf Ikatan Mahasiswa Muhammadiyah (MASTA)</strong> dengan tema kepemimpinan berintegritas dan progresif.`,
     year: "2025",
-    tag: "#Leadership",
+    tag: "#Organization",
     tagColor: "#c62828",
-  },
-  {
-    img: "assets/Certificates/sertifikat-lomba-essay-gema-aksara-5.png",
-    title: "Essay Competition Gema Aksara 5.0",
-    desc: `Sertifikat penghargaan atas partisipasi sebagai <strong>peserta</strong> dalam <strong>Essay Competition Gema Aksara 5.0</strong> dengan tema <strong>“Smart Steps for a Fast World: Youth Innovation and Logical Thinking in Facing Global Challenges”</strong>.`,
-    year: "2025",
-    tag: "#EssayCompetition",
-    tagColor: "#0d47a1",
   },
   {
     img: "assets/Certificates/sertifikat-seminar-hoax-usm.jpg",
     title: "Seminar Zona Informasi Bebas Hoax",
-    desc: `Sertifikat partisipasi diberikan sebagai <strong>peserta</strong> dalam seminar <strong>Zona Informasi Bebas Hoax</strong> yang diselenggarakan oleh <strong>BEM Fakultas Ilmu Komputer Universitas Saintek Muhammadiyah</strong>.`,
+    desc: `Seminar tentang informasi bebas hoax oleh <strong>BEM Fakultas Ilmu Komputer Universitas Saintek Muhammadiyah</strong>.`,
     year: "2025",
     tag: "#Seminar",
     tagColor: "#8b1e1e",
@@ -262,7 +325,7 @@ const certificates = [
   {
     img: "assets/Certificates/sertifikat-lsf-gnbsm.jpg",
     title: "Penguatan Budaya Sensor Mandiri",
-    desc: `Sertifikat partisipasi sebagai <strong>peserta</strong> dalam kegiatan Penguatan Gerakan Nasional Budaya Sensor Mandiri (GNBSM) yang diselenggarakan oleh <strong>Lembaga Sensor Film Republik Indonesia</strong>.`,
+    desc: `Kegiatan Penguatan Gerakan Nasional Budaya Sensor Mandiri oleh <strong>Lembaga Sensor Film Republik Indonesia</strong>.`,
     year: "2025",
     tag: "#LSF",
     tagColor: "#e8c413",
@@ -270,65 +333,25 @@ const certificates = [
   {
     img: "assets/Certificates/sertifikat-propam-usm.jpg",
     title: "PROPAM Saintek Muhammadiyah",
-    desc: `Sertifikat partisipasi sebagai <strong>peserta</strong> dalam kegiatan <strong>Program Pengenalan Almamater dan Kemuhammadiyahan (PROPAM)</strong> Universitas Saintek Muhammadiyah dengan tema <strong>"Generasi Visioner di Era Digital"</strong>.`,
+    desc: `Program Pengenalan Almamater dan Kemuhammadiyahan (PROPAM) dengan tema <strong>"Generasi Visioner di Era Digital"</strong>.`,
     year: "2025",
     tag: "#PROPAM",
     tagColor: "#0042c7",
   },
   {
-    img: "assets/Certificates/sertifikat-usk.jpg",
-    title: "Sertifikat Kompetensi BNSP - Junior Coder",
-    desc: `Sertifikat kompetensi yang menyatakan <strong>kompeten</strong> pada bidang <strong>Software Development (Pemrograman)</strong> dengan kualifikasi <strong>Okupasi Pemrogram Junior</strong>.`,
-    year: "2025",
-    tag: "#BNSP",
-    tagColor: "#45252a",
-  },
-  {
     img: "assets/Certificates/sertifikat-seminar-unsada.png",
     title: "Industry-Ready Talents - Unsada",
-    desc: `Sertifikat partisipasi diberikan dalam seminar "<strong>Building Industry-Ready Talents: Strategies & Career Opportunities</strong>" yang diselenggarakan di <strong>Universitas Darma Persada</strong>`,
+    desc: `Seminar karir bertema <strong>"Building Industry-Ready Talents: Strategies & Career Opportunities"</strong> di Universitas Darma Persada.`,
     year: "2025",
     tag: "#SeminarKarir",
     tagColor: "#8169c7",
   },
   {
-    img: "assets/Certificates/sertifikat-pkl.jpg",
-    title: "Sertifikat Magang - Artivisi",
-    desc: `Sertifikat magang diberikan atas kontribusinya dalam <strong>pengembangan perangkat lunak</strong> di <strong>PT Artivisi Intermedia</strong>`,
-    year: "2024 - 2025",
-    tag: "#Magang",
-    tagColor: "#338c03",
-  },
-  {
-    img: "assets/Certificates/sertifikat-infografis-uki.jpg",
-    title: "Poster Infografis - UKI",
-    desc: `Sertifikat partisipasi dalam <strong>kompetisi Poster Infografis</strong> pada Festival Jurnalistik 2024 oleh LPM GEMA, Fakultas Hukum, <strong>Universitas Kristen Indonesia</strong>.`,
-    year: "2024",
-    tag: "#Infografis",
-    tagColor: "#011978",
-  },
-  {
     img: "assets/Certificates/sertifikat-seminar-uki.jpg",
     title: "Seminar RUU Penyiaran - UKI",
-    desc: `Sertifikat partisipasi diberikan pada seminar bertema "<strong>RUU Penyiaran: Hambatan atau Solusi?</strong>" yang diselenggarakan oleh <strong>LPM GEMA FH UKI</strong>.`,
+    desc: `Seminar hukum bertema <strong>"RUU Penyiaran: Hambatan atau Solusi?"</strong> yang diselenggarakan oleh LPM GEMA FH UKI.`,
     year: "2024",
     tag: "#Seminar",
     tagColor: "#c48a02",
-  },
-  {
-    img: "assets/Certificates/sertifikat-lks.jpg",
-    title: "IT Software Solution - LKS",
-    desc: `Sertifikat <strong>Juara Harapan 1</strong> dalam kategori IT Software Solution for Business pada Kompetisi LKS 2024 yang diadakan oleh Dinas Pendidikan Jakarta Timur II, mewakili <strong>SMKN 10 Jakarta</strong>.`,
-    year: "2024",
-    tag: "#KompetisiIT",
-    tagColor: "#22b0f2",
-  },
-  {
-    img: "assets/Certificates/sertifikat-pelatihan-kominfo.jpg",
-    title: "Pelatihan Dasar Cyber Security - Kominfo",
-    desc: `Sertifkat diberikan karena telah menyelesaikan <strong>pelatihan 12 jam</strong> tentang Dasar Keamanan Siber yang diselenggarakan oleh <strong>Puslitbang SDP3I</strong>.`,
-    year: "2024",
-    tag: "#KeamananSiber",
-    tagColor: "#026ead",
   },
 ];
