@@ -221,7 +221,7 @@
 }
 
 .php {
-    background-color: #8892be; /* Biru PHP */
+    background-color: #7276ad; /* Biru PHP */
 }
 
 .mysql {
@@ -240,10 +240,6 @@
     background-color: #00c4cc; /* Cyan Canva */
 }
 
-.ai-assisted {
-    background-color: #6c63ff; /* Ungu AI */
-}
-
 .manual-drawing {
     background-color: #6b2181; /* Ungu Tua */
 }
@@ -258,4 +254,8 @@
 
 .docker {
     background-color: #0db7ed; /* Biru Docker */
+}
+
+.figma {
+    background-color: #9c57f7; /* Merah-Oranye Figma */
 }

@@ -77,6 +77,17 @@ const experiences = [
 // --- Tech Projects ---
 const techProjects = [
   {
+    title: "Kantoong",
+    desc: "Aplikasi mobile untuk membantu UMKM mengelola keuangan harian dengan lebih inklusif dan mudah.",
+    images: [
+      "assets/Projects/Tech/Kantoong/logo.png",
+      "assets/Projects/Tech/Kantoong/view.png",
+    ],
+    tech: ["Figma"],
+    linkText: "Lihat Prototype",
+    link: "https://www.figma.com/proto/Flog9iC8cBScuArJ4luUCB/Kantoong?node-id=34-6&p=f&t=g9LEh0NIBvr8Ai4f-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=34%3A9",
+  },
+  {
     title: "Emang Gitu",
     desc: "Aplikasi kuis interaktif untuk menampilkan gambaran diri pengguna dari jawaban yang dipilih.",
     images: [
@@ -179,14 +190,14 @@ const artProjects = [
     title: "UMKM Naik Kelas",
     desc: `Infografis singkat tentang transformasi digital UMKM untuk mendorong pertumbuhan ekonomi berkelanjutan.`,
     images: ["assets/Projects/Art/umkm-naik-kelas.jpg"],
-    tech: ["Canva", "AI-Assisted"],
+    tech: ["Canva"],
   },
   {
     title: "Fakta Menarik Daun Pepaya",
     desc: `Infografis singkat tentang manfaat kesehatan dan potensi ekonomi daun pepaya.
            <br><span class="template-cta">Tertarik membuat versi sendiri? <a href="https://lynk.id/anandadavidsaputra/ekp333oeqn6m" target="_blank">Klik di sini</a>.</span>`,
     images: ["assets/Projects/Art/fakta-menarik-daun-pepaya.png"],
-    tech: ["Canva", "AI-Assisted"],
+    tech: ["Canva"],
   },
   {
     title: "Kreativitas Jurnalisme di Tengah Gelombang Transformasi",
@@ -195,7 +206,7 @@ const artProjects = [
     images: [
       "assets/Projects/Art/kreativitas-jurnalisme-di-tengah-gelombang-transformasi.png",
     ],
-    tech: ["Canva", "AI-Assisted"],
+    tech: ["Canva"],
   },
   {
     title: "Tahun Baru Resolusi 2023",
@@ -214,13 +225,13 @@ const artProjects = [
     title: "Logo Mochi Moo",
     desc: "Logo dessert mochi dengan gaya lucu dan kekinian, dibuat dalam proyek kewirausahaan kelompok.",
     images: ["assets/Projects/Art/mochi-moo.png"],
-    tech: ["Canva", "AI-Assisted"],
+    tech: ["Canva"],
   },
   {
     title: "Logo Dapoer Azizah",
     desc: "Logo hasil proyek kelas yang terpilih sebagai desain terbaik, menggambarkan nuansa hangat dan sederhana dari usaha kuliner rumahan.",
     images: ["assets/Projects/Art/dapoer-azizah.png"],
-    tech: ["Canva", "AI-Assisted"],
+    tech: ["Canva"],
   },
 ];
 
