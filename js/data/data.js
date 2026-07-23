@@ -77,11 +77,22 @@ const experiences = [
 // --- Tech Projects ---
 const techProjects = [
   {
+    title: "MythClaw",
+    desc: "Aplikasi web gacha interaktif untuk mengoleksi kartu karakter dari berbagai mitologi dan legenda dunia.",
+    images: [
+      "assets/Projects/Tech/MythClaw/logo.webp",
+      "assets/Projects/Tech/MythClaw/view.webp",
+    ],
+    tech: ["HTML", "CSS", "JavaScript"],
+    linkText: "Buka Aplikasi",
+    link: "https://anandadavidsaputra.github.io/MythClaw",
+  },
+  {
     title: "Kantoong",
     desc: "Aplikasi mobile untuk membantu UMKM mengelola keuangan harian dengan lebih inklusif dan mudah.",
     images: [
-      "assets/Projects/Tech/Kantoong/logo.png",
-      "assets/Projects/Tech/Kantoong/view.png",
+      "assets/Projects/Tech/Kantoong/logo.webp",
+      "assets/Projects/Tech/Kantoong/view.webp",
     ],
     tech: ["Figma"],
     linkText: "Lihat Prototype",
@@ -91,8 +102,8 @@ const techProjects = [
     title: "Emang Gitu",
     desc: "Aplikasi kuis interaktif untuk menampilkan gambaran diri pengguna dari jawaban yang dipilih.",
     images: [
-      "assets/Projects/Tech/Emang Gitu/logo.png",
-      "assets/Projects/Tech/Emang Gitu/view.png",
+      "assets/Projects/Tech/Emang Gitu/logo.webp",
+      "assets/Projects/Tech/Emang Gitu/view.webp",
     ],
     tech: ["HTML", "CSS", "JavaScript"],
     linkText: "Buka Aplikasi",
@@ -102,8 +113,8 @@ const techProjects = [
     title: "KorupSmash",
     desc: "Game web sederhana untuk menghantam tikus berdasi sebagai hiburan bertema korupsi.",
     images: [
-      "assets/Projects/Tech/KorupSmash/logo.png",
-      "assets/Projects/Tech/KorupSmash/view.png",
+      "assets/Projects/Tech/KorupSmash/logo.webp",
+      "assets/Projects/Tech/KorupSmash/view.webp",
     ],
     tech: ["HTML", "CSS", "JavaScript"],
     linkText: "Buka Aplikasi",
@@ -113,8 +124,8 @@ const techProjects = [
     title: "Unitiverse",
     desc: "Aplikasi web sederhana untuk mengkonversi satuan ukur dan menampilkan fun facts yang menarik.",
     images: [
-      "assets/Projects/Tech/Unitiverse/logo.png",
-      "assets/Projects/Tech/Unitiverse/view.png",
+      "assets/Projects/Tech/Unitiverse/logo.webp",
+      "assets/Projects/Tech/Unitiverse/view.webp",
     ],
     tech: ["HTML", "CSS", "JavaScript"],
     linkText: "Buka Aplikasi",
@@ -124,8 +135,8 @@ const techProjects = [
     title: "Moodly",
     desc: "Aplikasi web sederhana untuk memudahkan pengguna mencatat mood harian dan melihat statistik suasana hati.",
     images: [
-      "assets/Projects/Tech/Moodly/logo.png",
-      "assets/Projects/Tech/Moodly/view.png",
+      "assets/Projects/Tech/Moodly/logo.webp",
+      "assets/Projects/Tech/Moodly/view.webp",
     ],
     tech: ["HTML", "CSS", "JavaScript"],
     linkText: "Buka Aplikasi",
@@ -135,8 +146,8 @@ const techProjects = [
     title: "ValutaGo",
     desc: "Aplikasi web sederhana untuk memudahkan pengguna mengecek kurs mata uang dan menghitung konversi dengan cepat.",
     images: [
-      "assets/Projects/Tech/ValutaGo/logo.png",
-      "assets/Projects/Tech/ValutaGo/view.png",
+      "assets/Projects/Tech/ValutaGo/logo.webp",
+      "assets/Projects/Tech/ValutaGo/view.webp",
     ],
     tech: ["HTML", "CSS", "JavaScript"],
     linkText: "Buka Aplikasi",
@@ -146,8 +157,8 @@ const techProjects = [
     title: "PresenTen",
     desc: "Aplikasi mobile untuk mencatat presensi dengan lebih mudah dan meningkatkan akurasi harian.",
     images: [
-      "assets/Projects/Tech/PresenTen/logo.png",
-      "assets/Projects/Tech/PresenTen/view.png",
+      "assets/Projects/Tech/PresenTen/logo.webp",
+      "assets/Projects/Tech/PresenTen/view.webp",
     ],
     tech: ["Flutter", "PHP", "MySQL"],
     linkText: "Lihat Github",
@@ -157,8 +168,8 @@ const techProjects = [
     title: "Sahabat Qur’an (Web)",
     desc: "Sistem web terpusat untuk mengelola kelas Al-Qur’an, peserta, materi, dan catatan akademik.",
     images: [
-      "assets/Projects/Tech/Sahabat Quran Web/logo.png",
-      "assets/Projects/Tech/Sahabat Quran Web/view.png",
+      "assets/Projects/Tech/Sahabat Quran Web/logo.webp",
+      "assets/Projects/Tech/Sahabat Quran Web/view.webp",
     ],
     tech: ["Spring-Boot", "PostgreSQL", "Docker"],
   },
@@ -166,8 +177,8 @@ const techProjects = [
     title: "Sahabat Qur’an (Mobile)",
     desc: "Aplikasi mobile untuk membantu belajar Al-Qur’an dengan cara yang terstruktur dan menyenangkan.",
     images: [
-      "assets/Projects/Tech/Sahabat Quran Mobile/logo.png",
-      "assets/Projects/Tech/Sahabat Quran Mobile/view.png",
+      "assets/Projects/Tech/Sahabat Quran Mobile/logo.webp",
+      "assets/Projects/Tech/Sahabat Quran Mobile/view.webp",
     ],
     tech: ["Flutter", "Canva"],
   },
@@ -175,8 +186,8 @@ const techProjects = [
     title: "Sedu",
     desc: "Aplikasi Android sederhana untuk memudahkan pengguna melihat menu dan memesan kopi.",
     images: [
-      "assets/Projects/Tech/Sedu/logo.png",
-      "assets/Projects/Tech/Sedu/view.png",
+      "assets/Projects/Tech/Sedu/logo.webp",
+      "assets/Projects/Tech/Sedu/view.webp",
     ],
     tech: ["Android", "Java"],
     linkText: "Lihat Github",
@@ -302,13 +313,13 @@ const professionalCertificates = [
 // --- Seminar, Organisasi & Kegiatan Kampus ---
 const developmentCertificates = [
   {
-  img: "assets/Certificates/sertifikat-ldkm-2026.jpeg",
-  title: "LDKM BEM Fasilkom USM",
-  desc: `Kegiatan <strong>Latihan Dasar Kepemimpinan Mahasiswa (LDKM)</strong> oleh BEM Fasilkom USM untuk membentuk karakter visioner dan berintegritas.`,
-  year: "2026",
-  tag: "#Leadership",
-  tagColor: "#c62828",
-},
+    img: "assets/Certificates/sertifikat-ldkm-2026.jpeg",
+    title: "LDKM BEM Fasilkom USM",
+    desc: `Kegiatan <strong>Latihan Dasar Kepemimpinan Mahasiswa (LDKM)</strong> oleh BEM Fasilkom USM untuk membentuk karakter visioner dan berintegritas.`,
+    year: "2026",
+    tag: "#Leadership",
+    tagColor: "#c62828",
+  },
   {
     img: "assets/Certificates/sertifikat-seminar-pancasila.png",
     title: "Seminar Pancasila USM",
