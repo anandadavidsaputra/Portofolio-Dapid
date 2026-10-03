@@ -3,6 +3,28 @@
 // ==========================================
 const experiences = [
   {
+    title: "Karang Taruna",
+    desc: "Aktif dalam kegiatan Karang Taruna di lingkungan masyarakat dengan berpartisipasi dalam kegiatan sosial, kepemudaan, dan membantu pelaksanaan berbagai kegiatan warga.",
+    year: "2026",
+    tag: "#Organization",
+    tagColor: "#2e7d32",
+    badge: "Karang Taruna",
+    badgeGradient: "linear-gradient(to left, #43a047, #2e7d32)",
+    img: "assets/Experiences/karangtaruna2026.webp",
+    alt: "Kegiatan Karang Taruna",
+  },
+  {
+    title: "ShopeeFood Driver",
+    desc: "Bekerja sebagai driver ShopeeFood dengan bertanggung jawab mengantarkan pesanan kepada pelanggan, menjaga ketepatan waktu, serta memberikan pelayanan yang baik.",
+    year: "2026",
+    tag: "#WorkExperience",
+    tagColor: "#ee4d2d",
+    badge: "Driver",
+    badgeGradient: "linear-gradient(to left, #ff7043, #ee4d2d)",
+    img: "assets/Experiences/shopee-driver.webp",
+    alt: "Pengalaman sebagai ShopeeFood Driver",
+  },
+  {
     title: "LDKM BEM Fasilkom USM",
     desc: "Mengikuti Latihan Dasar Kepemimpinan Mahasiswa (LDKM) yang diselenggarakan oleh BEM Fasilkom Universitas Saintek Muhammadiyah untuk mengembangkan jiwa kepemimpinan dan organisasi.",
     year: "2026",
